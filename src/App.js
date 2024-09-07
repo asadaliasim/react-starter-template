@@ -1,13 +1,13 @@
-import { ChakraBaseProvider } from '@chakra-ui/react';
+import { ChakraProvider } from '@chakra-ui/react';
 import { RouterProvider } from 'react-router-dom';
 import router from './routes/index';
 
 function App() {
   return (
     <>
-      <ChakraBaseProvider>
+      <ChakraProvider>
         <RouterProvider router={router} />
-      </ChakraBaseProvider>
+      </ChakraProvider>
     </>
   );
 }

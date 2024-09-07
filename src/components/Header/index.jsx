@@ -1,15 +1,18 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './style.css';
-import { Box, Flex, Spacer } from '@chakra-ui/react';
+import { Box, Flex, Heading, Text } from '@chakra-ui/react';
 
 function Header() {
   return (
     <>
-      <Flex>
-        <Box>MixMaster</Box>
-        <Spacer />
-        <Box>
+      <Flex justify="space-between" mt="20px" mb="20px">
+        <Box ml="25vh">
+          <Heading as="h2" size="2xl" color="#10b981">
+            MixMaster
+          </Heading>
+        </Box>
+        <Box alignContent={'center'} mr={'25vh'}>
           <ul>
             <NavLink
               to="/"
@@ -17,13 +20,19 @@ function Header() {
                 return `${isActive ? 'active' : 'menu'}`;
               }}
             >
-              <li>Home</li>
+              <li>
+                <Text fontSize="lg">Home</Text>
+              </li>
             </NavLink>
             <NavLink to="/about" className="menu">
-              <li>About</li>
+              <li>
+                <Text fontSize="lg">About</Text>
+              </li>
             </NavLink>
             <NavLink to="/news-letter" className="menu">
-              <li>NewsLetter</li>
+              <li>
+                <Text fontSize="lg">Newsletter</Text>
+              </li>
             </NavLink>
           </ul>
         </Box>

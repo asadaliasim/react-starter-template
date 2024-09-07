@@ -10,7 +10,6 @@ li {
 }
 ul {
   display: flex;
-  align-items: flex-end;
   gap: 20px;
 }
 .active {
